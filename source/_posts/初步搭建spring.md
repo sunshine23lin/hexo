@@ -1,7 +1,7 @@
 ---
 title: IntelliJ IDEA创建Spring Maven 项目 - HelloWorld
 date: 2019-06-06 11:11:25
-categories: spring
+categories: Spring
 tags: Java后端
 
 ---
