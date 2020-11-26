@@ -1,8 +1,8 @@
 ---
-title: netty初步认识
-date: 2019-07-04 16:27:08
-categories: Netty
-tags:
+title: 网络框架-Netty
+date: 2020-11-26 16:27:08
+categories: 网络编程
+tags: Netty
 ---
 
 ## 一、netty的简介

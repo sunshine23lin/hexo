@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sunshine23lin.github.io/2019/08/16/spring%E8%A3%85%E9%85%8DBean/</loc>
-    <lastmod>2019-08-16</lastmod>
-  </url>  <url>
-    <loc>https://sunshine23lin.github.io/2019/08/13/springboot-3/</loc>
-    <lastmod>2019-08-13</lastmod>
-  </url>  <url>
-    <loc>https://sunshine23lin.github.io/2019/08/07/springboot-2/</loc>
-    <lastmod>2019-08-08</lastmod>
-  </url>  <url>
-    <loc>https://sunshine23lin.github.io/2019/08/02/netty-3/</loc>
-    <lastmod>2019-08-07</lastmod>
-  </url>  <url>
-    <loc>https://sunshine23lin.github.io/2019/08/02/socket-1/</loc>
-    <lastmod>2019-08-02</lastmod>
-  </url>  <url>
-    <loc>https://sunshine23lin.github.io/2019/06/14/SpringBoot%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2019-08-02</lastmod>
-  </url>  <url>
-    <loc>https://sunshine23lin.github.io/2019/08/02/netty-2/</loc>
-    <lastmod>2019-08-02</lastmod>
-  </url>  <url>
-    <loc>https://sunshine23lin.github.io/2019/07/04/netty-1/</loc>
-    <lastmod>2019-08-02</lastmod>
-  </url>  <url>
-    <loc>https://sunshine23lin.github.io/2019/06/10/spring%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/</loc>
-    <lastmod>2019-06-10</lastmod>
-  </url>  <url>
-    <loc>https://sunshine23lin.github.io/2019/06/06/bean%E5%AF%B9%E8%B1%A1/</loc>
-    <lastmod>2019-06-10</lastmod>
-  </url>  <url>
-    <loc>https://sunshine23lin.github.io/2019/06/06/%E5%88%9D%E6%AD%A5%E6%90%AD%E5%BB%BAspring/</loc>
-    <lastmod>2019-06-06</lastmod>
+    <loc>https://sunshine23lin.github.io/2020/11/26/netty-1/</loc>
+    <lastmod>2020-11-26</lastmod>
   </url>
 </urlset>
