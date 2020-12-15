@@ -1,477 +1,999 @@
 <!DOCTYPE html>
-<html lang=zh>
+<html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-transform">
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="format-detection" content="telephone=no,email=no,adress=no">
-  <!-- Color theme for statusbar -->
-  <meta name="theme-color" content="#000000">
-  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
-  <meta http-equiv="window-target" content="_top">
+  <title>JAVA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
-  <title>Hexo</title>
+  
+  
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://sunshine23lin.github.io/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:title" content="JAVA">
+<meta property="og:url" content="https://jameslin23.gitee.io/index.html">
+<meta property="og:site_name" content="JAVA">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  <!-- Canonical links -->
-  <link rel="canonical" href="https://sunshine23lin.github.io/index.html">
+<meta name="twitter:title" content="JAVA">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="JAVA" type="application/atom+xml">
   
+
   
-    <link rel="icon" href="/favicon.png" type="image/x-icon">
+
+  <link rel="icon" href="/css/images/mylogo.jpg">
+  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
   
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt; src:url("/css/fonts/FuturaPTBold.otf") format("woff");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt-light; src:url("/css/fonts/FuturaPTBook.otf") format("woff");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt-italic; src:url("/css/fonts/FuturaPTBookOblique.otf") format("woff");font-weight:400;font-style:italic;}
+}
+
+  </style>
   <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+
+  
+    <link rel="stylesheet" href="/css/home.css">
+  
+
+  
+
+  
+
   
   
   
+    <link rel="stylesheet" href="/css/vdonate.css">
   
+
 </head>
+</html>
 
 
-<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
-  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-  <div class="slimContent">
-    <div class="navbar-header">
-      
-      
-      <div class="profile-block text-center">
-        <a id="avatar" href="https://github.com/cofess" target="_blank">
-          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
-        </a>
-        <h2 id="name" class="hidden-xs hidden-sm">java打工猫</h2>
-        <h3 id="title" class="hidden-xs hidden-sm hidden-md">爱生活爱编码</h3>
-        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> 广州</small>
-      </div>
-      
-      <div class="search" id="search-form-wrap">
-
-    <form class="search-form sidebar-form">
-        <div class="input-group">
-            <input type="text" class="search-form-input form-control" placeholder="搜索">
-            <span class="input-group-btn">
-                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
-            </span>
-        </div>
-    </form>
-    <div class="ins-search">
-  <div class="ins-search-mask"></div>
-  <div class="ins-search-container">
-    <div class="ins-input-wrapper">
-      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech>
-      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-    </div>
-    <div class="ins-section-wrapper">
-      <div class="ins-section-container"></div>
-    </div>
-  </div>
-</div>
+  <body>
 
 
-</div>
-      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
-      <ul class="nav navbar-nav main-nav ">
-        
-        
-        <li class="menu-item menu-item-home">
-          <a href="/.">
-            
-            <i class="icon icon-home-fill"></i>
-            
-            <span class="menu-title">首页</span>
-          </a>
-        </li>
-        
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives">
-            
-            <i class="icon icon-archives-fill"></i>
-            
-            <span class="menu-title">归档</span>
-          </a>
-        </li>
-        
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories">
-            
-            <i class="icon icon-folder"></i>
-            
-            <span class="menu-title">分类</span>
-          </a>
-        </li>
-        
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags">
-            
-            <i class="icon icon-tags"></i>
-            
-            <span class="menu-title">标签</span>
-          </a>
-        </li>
-        
-        
-        <li class="menu-item menu-item-repository">
-          <a href="/repository">
-            
-            <i class="icon icon-project"></i>
-            
-            <span class="menu-title">项目</span>
-          </a>
-        </li>
-        
-        
-        <li class="menu-item menu-item-books">
-          <a href="/books">
-            
-            <i class="icon icon-book-fill"></i>
-            
-            <span class="menu-title">书单</span>
-          </a>
-        </li>
-        
-        
-        <li class="menu-item menu-item-links">
-          <a href="/links">
-            
-            <i class="icon icon-friendship"></i>
-            
-            <span class="menu-title">友链</span>
-          </a>
-        </li>
-        
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about">
-            
-            <i class="icon icon-cup-fill"></i>
-            
-            <span class="menu-title">关于</span>
-          </a>
-        </li>
-        
-      </ul>
-      
+  
+    <header id="header">
+
+	<!-- 背景图模式 -->
 	
-    <ul class="social-links">
-    	
-        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li>
-        
-        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle="tooltip" data-placement="top"><i class="icon icon-weibo"></i></a></li>
-        
-        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle="tooltip" data-placement="top"><i class="icon icon-twitter"></i></a></li>
-        
-        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle="tooltip" data-placement="top"><i class="icon icon-behance"></i></a></li>
-        
-        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle="tooltip" data-placement="top"><i class="icon icon-rss"></i></a></li>
-        
-    </ul>
 
-    </nav>
+    
+      <div id="intrologo" class="intro-logo" style="background-position:center; background-repeat:no-repeat; background-image: url(); background-size: auto 100%;">
+
+      <!-- Support rolling -->  
+        
+        <section class="awSlider">
+          <div class="carousel slide carousel-fade " data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+               
+                  
+                    <div class="item active">
+                  
+                    <img id="carousel-img0" src="/css/images/pose.jpg">
+                  </div>
+
+                  <!-- 自适应大图 -->
+                  <script>
+                      var img0 = new Image();
+                      var imageTag0 = document.getElementById("carousel-img0");
+                      img0.src = imageTag0.src;
+                      img0.onload=function(){
+                        if (img0.width / img0.height <= document.body.clientWidth / document.body.clientHeight) {
+                          imageTag0.style.width = document.body.clientWidth + "px";
+                        } else {
+                          imageTag0.style.height = document.body.clientHeight + "px";
+                          imageTag0.style.marginLeft = -(document.body.clientHeight * img0.width / img0.height - document.body.clientWidth) / 2 + "px";
+                        }
+                      };
+                  </script>
+                
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Geri</span>
+            </a>
+            <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">İleri</span>
+            </a>
+          </div>
+        </section>
+        <script>
+          $('section.awSlider .carousel').carousel({
+              pause: '',
+              interval: 5000
+          });
+          var startImage = $('section.awSlider .item.active > img').attr('src');
+          $('section.awSlider .carousel').on('slid.bs.carousel', function () {
+              var bscn = $(this).find('.item.active > img').attr('src');
+              $('section.awSlider > img').attr('src', bscn);
+          });
+        </script>
+      
+
+    
+ 
+
+
+    <canvas width="100%" height="100%"></canvas>
+    <script>
+      var c = document.getElementsByTagName('canvas')[0],
+          x = c.getContext('2d'),
+          w = window.innerWidth,
+          h = window.innerHeight,
+          pr = window.devicePixelRatio || 1,
+          f = 90,
+          q,
+          m = Math,
+          r = 0,
+          u = m.PI*2,
+          v = m.cos,
+          z = m.random
+      c.width = w*pr
+      c.height = h*pr
+      x.scale(pr, pr)
+      x.globalAlpha = 0.6
+
+      <!-- 折线Polyline背景 -->
+      
+    </script>
+    
+
+    
+      <div id="homelogo" class="homelogo" style="background: rgba(255,255,255,1);"> 
+    
+
+        
+          <div class="homelogoback" style="border: 1px solid #404040;">
+            <h1><a href="#content" id="logo">JAVA</a></h1>
+            <h3></h3>
+            <h5>LeBron Tao</h5>
+            <!-- <p><a href="https://github.com/iTimeTraveler" target="_blank">Github</a></p> -->
+          </div>
+        
+    
+    </div>
   </div>
+
+  <!-- 自适应主页背景大图 -->
+  
+
+ <!-- home_logo_image居中 -->
+ 
+    <script>
+        var homelogodiv = document.getElementById("homelogo");
+        if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
+          homelogodiv.style.width = document.body.clientWidth + "px";
+          homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
+        } else {
+          homelogodiv.style.width = homelogodiv.clientWidth  + "px";
+          homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
+        }
+    </script>
+  
+
+  <div class="intro-navigate">
+      <p class="navigater-list">
+        
+          <a id="beautifont" class="main-nav-link" href="/">首页</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/archives">归档</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/categories">分类</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/tags">标签</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/about">关于</a>
+        
+      </p>
+  </div>
+
 </header>
-
   
-    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
-  <div class="slimContent">
-    
-      <div class="widget">
-    <h3 class="widget-title">公告</h3>
-    <div class="widget-body">
-        <div id="board">
-            <div class="content">
-                <p>欢迎交流与分享经验!</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-    
+  <div id="container">
+    <div id="wrap">
       
-  <div class="widget">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/网络编程/">网络编程</a><span class="category-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget-body">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Netty/">Netty</a><span class="tag-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget-body tagcloud">
-      <a href="/tags/Netty/" style="font-size: 13px;">Netty</a>
-    </div>
-  </div>
-
-    
-      
-  <div class="widget">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-    
-      
-  <div class="widget">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget-body">
-      <ul class="recent-post-list list-unstyled no-thumbnail">
-        
-          <li>
             
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/网络编程/">网络编程</a>
-              </p>
-              <p class="item-title">
-                <a href="/2020/11/26/netty-1/" class="title">网络框架-Netty</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2020-11-26T08:27:08.000Z" itemprop="datePublished">2020-11-26</time>
-              </p>
-            </div>
-          </li>
-          
-      </ul>
-    </div>
-  </div>
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;">
   
-
+    <article id="post-TCP-IP" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
     
-  </div>
-</aside>
-
-  
-  <main class="main" role="main">
-  
-  
-    <div class="content">
-  <article id="post-netty-1" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-    <div class="article-header">
+    <div class="article-meta">
       
+	<a href="/2020/12/14/TCP-IP/" class="article-date">
+	  <time datetime="2020-12-14T01:47:40.000Z" itemprop="datePublished">2020-12-14</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/计算机网络/">计算机网络</a>
+
+      
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          OSI标准模型OSI标准模型是7层架构
+
+​    
+
+应用层: 应用层是OSI标准模型的最顶层,是直接为应用进程提供服务。其作用在实现多个系统应用进程相互通信的同时，完成一系列业务处理所需要的服务。包括文件传输、电子邮件远程登录和远程接口调用等协议。
+表示层: 表示层向上对应用服务，向下接收会话层提供的服务，表示层位于OSI标准模型的第六层，表示层的主要作用就是将设备的固有数据格式转换为网络标准传输格式。
+会话层: 会话层位于OSI标准模型的第五层，它是建立在传输层之上，利用传输层提供的...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/14/TCP-IP/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-平衡二叉搜索树" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/26/netty-1/">网络框架-Netty</a>
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/12/平衡二叉搜索树/">平衡二叉搜索树</a>
     </h1>
   
 
+      </header>
+    
+    <div class="article-meta">
       
-      <div class="article-meta">
-        <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2020/11/26/netty-1/" class="article-date">
-	  <time datetime="2020-11-26T08:27:08.000Z" itemprop="datePublished">2020-11-26</time>
+	<a href="/2020/12/12/平衡二叉搜索树/" class="article-date">
+	  <time datetime="2020-12-12T03:36:28.000Z" itemprop="datePublished">2020-12-12</time>
 	</a>
-</span>
-        
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/网络编程/">网络编程</a>
-  </span>
-
-        
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/Netty/">Netty</a>
-  </span>
-
-
-        
-
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/11/26/netty-1/#comments" class="article-comment-link">评论</a></span>
-        
-      </div>
-    </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
-      
-        <h2 id="一、netty的简介"><a href="#一、netty的简介" class="headerlink" title="一、netty的简介"></a>一、netty的简介</h2><ol>
-<li><p>什么是Netty</p>
-<blockquote>
-<p>Netty是一个利用java的高级网络的能力,隐藏其背后的复杂性而提供一个易于使用的API的客户端/服务器框架。</p>
-</blockquote>
-</li>
-<li><p>Netty构成部分<br>Channel</p>
-<blockquote>
-<p>Channel是NIO基本结构,他代表一个用于连接到实体如硬件设备、文件、网络套接字或程序组件,能够执行一个或者多个不同的I/O操作的开发连接。<br>把Channel想象成一个可以”打开”或者”关闭”,”连接”或”断开”和作为传入和传出数据的运输。</p>
-</blockquote>
-</li>
-</ol>
-<p>Callback (回调)</p>
-<blockquote>
-<p>callback (回调)是一个简单的方法,提供给另一种方法作为引用,这样后者就可以在某个合适的 时间调用前者。这种技术被广泛使用在各种编程的情况下,最常见的方法之一通知给其他人操 作已完成。</p>
-</blockquote>
-<p>Future</p>
-<blockquote>
-<p>Future 提供了另外一种通知应用操作已经完成的方式。这个对象作为一个异步操作结果的占 位符,它将在将来的某个时候完成并提供结果。</p>
-</blockquote>
-<p>Event和Handler</p>
-<blockquote>
-<p>Netty使用不同的事件来通知我们更改的状态和操作的状态。这使我们能够根据发送的事件触发适当的行为。<br>这些行为可能包括:</p>
-<ul>
-<li>日志</li>
-<li>数据转换</li>
-<li>流控制</li>
-<li>应用程序逻辑</li>
-</ul>
-</blockquote>
-<p>由于Netty是一个网络框架,事件很清晰的跟入站或或出站数据流相关。因为一些事件可能触发传入的数据或状态的变化包括：</p>
-<ul>
-<li>活动或者非活动连接</li>
-<li>数据的读取</li>
-<li>用户事件</li>
-<li>错误</li>
-</ul>
-<p>出站事件是由于在未来操作将触发一个动作。这些包括:</p>
-<ul>
-<li>打开或关闭一个连接到远程</li>
-<li>写或冲刷数据到socket</li>
-</ul>
 
       
+    <a class="article-category-link" href="/categories/数据结构与算法/">数据结构与算法</a>
+
+      
+      
+
     </div>
-    <div class="article-footer">
-      <blockquote class="mt-2x">
-  <ul class="post-copyright list-unstyled">
-    
-    <li class="post-copyright-link hidden-xs">
-      <strong>本文链接：</strong>
-      <a href="https://sunshine23lin.github.io/2020/11/26/netty-1/" title="网络框架-Netty" target="_blank" rel="external">https://sunshine23lin.github.io/2020/11/26/netty-1/</a>
-    </li>
-    
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-</blockquote>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          平衡二叉搜索树平衡二叉搜索树简称:BBST
+平衡二叉搜索树类型
+
+AVL树
+Windows NT 内核中广泛使用
+
+红黑树
+C++ STL(比如map、set)
+java的TreeMap、TreeSet、HashMap、HashSet
+Linux的进程调度
+Ngix的timer管理
 
 
-<div class="panel panel-default panel-badger">
-  <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/avatar.jpg" class="img-rounded w-full" alt>
-        </a>
+AVL树平衡因子(Balance Factor): 某节点的左右子树的高度差
+特点
+每个节点的平衡因子只可能是1、0、-1(如果绝对值-1,如果超过1,称为失衡)
+每个节点的左右子树高度差不超过1
+搜索、添...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/12/平衡二叉搜索树/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-ZooKeeper的ZAB协议" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/11/ZooKeeper的ZAB协议/">ZooKeeper的ZAB协议</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/12/11/ZooKeeper的ZAB协议/" class="article-date">
+	  <time datetime="2020-12-11T07:07:32.000Z" itemprop="datePublished">2020-12-11</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/服务中心/">服务中心</a>
+
+      
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          前言Zab（Zookeeper Atomic Broadcast）是为ZooKeeper协设计的崩溃恢复原子广播协议，它保证zookeeper集群数据的一致性和命令的全局有序性。
+概念介绍在介绍zab协议之前首先要知道zookeeper相关的几个概念，才能更好的了解zab协议。
+
+集群角色
+Leader: 同一时间集群总有允许有一个Leader,提供对客户端的读写功能，负责将数据同步至各个节点。
+Follower: 提供对客户端读功能,写请求则转发给Leader处理,当Leader崩溃失联...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/11/ZooKeeper的ZAB协议/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-ZooKeeper" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/11/ZooKeeper/">ZooKeeper</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/12/11/ZooKeeper/" class="article-date">
+	  <time datetime="2020-12-11T02:12:20.000Z" itemprop="datePublished">2020-12-11</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/服务中心/">服务中心</a>
+
+      
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          Zookeeper概述
+ZooKeeper是一个分布式服务框架，可以用ZooKeeper来做：统一配置管理、统一命名服务、分布式锁、集群管理。
+使用分布式系统就无法避免对节点管理的问题(需要实时感知节点的状态、对节点进行统一管理等等)，而由于这些问题处理起来可能相对麻烦和提高了系统的复杂性，ZooKeeper作为一个能够通用解决这些问题的中间件就应运而生了
+
+结构那为什么ZooKeeper可以干那么多事？来看看ZooKeeper究竟是何方神物，在Wiki中其实也有提到：
+
+ZooKeepe...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/11/ZooKeeper/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-mysql之count用法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/10/mysql之count用法/">mysql之count用法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/12/10/mysql之count用法/" class="article-date">
+	  <time datetime="2020-12-10T11:35:17.000Z" itemprop="datePublished">2020-12-10</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/数据库/">数据库</a>
+
+      
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          这个常用的COUNT函数，却暗藏着很多玄机，尤其是在面试的时候，一不小心就会被虐。不信的话请尝试回答下以下问题：
+
+1、COUNT有几种用法？
+2、COUNT(字段名)和COUNT(*)的查询结果有什么不同？
+3、COUNT(1)和COUNT(*)之间有什么不同？
+4、COUNT(1)和COUNT(*)之间的效率哪个更高？
+5、为什么《阿里巴巴Java开发手册》建议使用COUNT(*)
+6、MySQL的MyISAM引擎对COUNT(*)做了哪些优化？
+7、MySQL的InnoDB引擎对CO...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/10/mysql之count用法/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-mysql事务" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/10/mysql事务/">mysql事务</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/12/10/mysql事务/" class="article-date">
+	  <time datetime="2020-12-10T05:44:50.000Z" itemprop="datePublished">2020-12-10</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/数据库/">数据库</a>
+
+      
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          事务的四大特性
+原子性:  事务最小工作单位，要么全部成功,要没全部失败。
+一致性:  事务开始和结束后，数据库完整性不会被破坏。
+隔离性:  不同事务之间互不影响，四种隔离级别为RU(读为提交)、RC(读已提交)、RR(可重复读)、SERIALIZABLE （串行化）。
+持久性:  事务提交后,对数据的修改是永久性的，即便系统故障也不会丢失。
+
+事务的隔离级别读未提交(Read UnCommitted/RU)一个事务可以读取到另外一个事务未提交的数据。这种隔离级别是最不安全的，因为未提交...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/10/mysql事务/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-Memcache" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/09/Memcache/">Memcache</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/12/09/Memcache/" class="article-date">
+	  <time datetime="2020-12-09T12:50:10.000Z" itemprop="datePublished">2020-12-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Nosql/">Nosql</a>
+
+      
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          memchache特点
+MC处理请求时使用多线程异步IO方法，可以合理利用CPU多核的优势，性能非常优秀。
+MC功能简单，使用内存存储数据
+MC 对缓存的数据可以设置失效期，过期后的数据会被清除；
+失效的策略采用延迟失效，就是当再次使用数据时检查是否失效；
+当容量存满时，会对缓存中的数据进行剔除，剔除时除了会对过期 key 进行清理，还会按 LRU 策略对数据进行剔除。
+
+缺陷
+key不能超过250个字节
+value不能超过1M字节
+key的最大失效时间是30天
+只支持K-V结构，不能供持...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/09/Memcache/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-redis面试专题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/09/redis面试专题/">redis面试专题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/12/09/redis面试专题/" class="article-date">
+	  <time datetime="2020-12-09T00:55:02.000Z" itemprop="datePublished">2020-12-09</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Nosql/">Nosql</a>
+
+      
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          一、redis用了哪些数据结构？适用哪些场景二、redis是单线程，为什么不使用多线程？三、redis持久化机制？四、redis哨兵模式如何实现故障转移？五、穿透，击穿，雪崩如何解决六、谈一谈redis分布式锁?七、你了解最经典的KV、DB读写模式么？八、为什么是删除缓存，而不是更新缓存？九、Redis 和 Memcached 有啥区别，为啥选择用Redis作为你们的缓存中间件？十、假如Redis里面有1亿个key，其中有10w个key是以某个固定的已知的前缀开头的，如何将它们全部找出来？...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/09/redis面试专题/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-redis分布式锁" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/07/redis分布式锁/">redis分布式锁</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/12/07/redis分布式锁/" class="article-date">
+	  <time datetime="2020-12-07T12:01:38.000Z" itemprop="datePublished">2020-12-07</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Nosql/">Nosql</a>
+
+      
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          分布式锁什么是分布式锁?分布式锁就是控制分布式系统或不同系统之间共同访问共享资源的一种锁实现,如果不同的系统或同一个系统的不同主机之间共享了某个资源时，往往需要互斥来防止彼此干扰来保证一致性。
+分布式锁需要具备哪些条件
+互斥性:在任意一个时刻,只有一个客户端持有锁
+无死锁:即便持有锁的客户端崩溃或者其他意外事件,锁仍然可以被获取。
+容错:只要大部分redis节点都活着,客户端就可以获取锁和释放锁
+
+分布式锁实现有哪些？
+数据库
+Memcached（add命令）
+Redis（setnx命令）...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/07/redis分布式锁/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-redis缓存故障" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/07/redis缓存故障/">redis缓存故障</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/12/07/redis缓存故障/" class="article-date">
+	  <time datetime="2020-12-07T06:25:23.000Z" itemprop="datePublished">2020-12-07</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/Nosql/">Nosql</a>
+
+      
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          缓存穿透缓存穿透的概念,用户想查询一个数据，发现Redis没有，也就是缓存没有命中，于是向持久层数据库查询。发现也没有，于是本次查询失败。当用户很多时候，缓存都没有命中，于是都去请求了持久层数据库。这个给持久层数据库造成很多的压力。
+
+ 解决方法:
+1、缓存空对象
+当存储层不命中时,即使返回空对象也将其缓存起来,设置一个过期时间，之后再访问这个数据将会从缓存中获取，保护了后端数据源
+
+但是这种方法会存在两个问题：
+
+1、缓存区可能存在大量空值的键
+2、可能会存在缓存层和存储层会有一段时间空...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/07/redis缓存故障/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
+  </nav>
+
+</section>
+        
       </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">java打工猫</span><small class="ml-1x">爱生活爱编码</small></a></h3>
-        <div>个人简介。</div>
+      
+        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2020 JAVA All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				访客数 : <span id="busuanzi_value_site_uv"></span> |  
+				访问量 : <span id="busuanzi_value_site_pv"></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+
+  <script src="/js/home.js"></script>
+
+
+
+
+
+
+
+
+
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
       </div>
-    </figure>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            JAVA
+          </div>
+          <div class="panel-body">
+            Copyright © 2020 LeBron Tao All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
   </div>
 </div>
-
-
-    </div>
-  </article>
   
-</div>
-
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
   
-
-   
-</main>
-
-  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
-	
-	
-    <ul class="social-links">
-    	
-        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li>
-        
-        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle="tooltip" data-placement="top"><i class="icon icon-weibo"></i></a></li>
-        
-        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle="tooltip" data-placement="top"><i class="icon icon-twitter"></i></a></li>
-        
-        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle="tooltip" data-placement="top"><i class="icon icon-behance"></i></a></li>
-        
-        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle="tooltip" data-placement="top"><i class="icon icon-rss"></i></a></li>
-        
-    </ul>
-
-    <div class="copyright">
-    	
-        <div class="publishby">
-        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
-        </div>
-    </div>
-</footer>
-  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-<script>
-window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
-</script>
-<script src="/js/plugin.min.js"></script>
-<script src="/js/application.js"></script>
-
-    <script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: '文章',
-            PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
-            UNTITLED: '(未命名)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-<script src="/js/insight.js"></script>
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
 </body>
 </html>

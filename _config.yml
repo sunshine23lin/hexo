@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: JAVA
 subtitle:
 description:
 keywords:
-author: John Doe
+author: LeBron Tao
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'  http://sunshine23lin.github.io
-url: https://sunshine23lin.github.io
+url: https://jameslin23.gitee.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -76,12 +76,13 @@ config:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: pure
+theme: hexo-theme-hiker-master
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo:
-      github: git@github.com:sunshine23lin/sunshine23lin.github.io.git,master
+      github: git@gitee.com:jameslin23/jameslin23.git,master
+     
 
