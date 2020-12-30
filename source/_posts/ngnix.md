@@ -203,6 +203,185 @@ upstream kevin {
 
 待编辑
 
+#  nginx限流
+
+nginx提供两种限流的方式
+
+- **控制速率**
+- **控制并发连接数**
+
+##  控制速率
+
+**原理**
+
+采用漏桶算法实现控制速率限流
+
+漏桶(Leaky Bucket) 算法思路很简单，水(请求)先进入到漏桶里，漏桶以一定的速度出水(接口有响应速率),当水流入速度过大会直接溢出（访问频率超过接口响应速率），然后就拒绝请求，可以看出漏桶算法能强行限制数据的传输速率。
+
+![image-20201224085740670](C:\Users\Administrator.USER-20190627HM\AppData\Roaming\Typora\typora-user-images\image-20201224085740670.png)
+
+**配置1**
+
+```nginx
+user  root root;
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #cache
+    lua_shared_dict dis_cache 128m;
+
+    #限流设置
+    limit_req_zone $binary_remote_addr zone=contentRateLimit:10m rate=2r/s;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    server {
+        listen       80;
+        server_name  localhost;
+
+        location /update_content {
+            content_by_lua_file /root/lua/update_content.lua;
+        }
+
+        location /read_content {
+            #使用限流配置
+            limit_req zone=contentRateLimit;
+            content_by_lua_file /root/lua/read_content.lua;
+        }
+    }
+}
+```
+
+**配置参数说明**
+
+- **binary_remote_addr**: 是一种key,表示基于remote_add(客户端)来做限流，binary_ 目的压缩内存占用量。
+- **zone**: 定义共享内存区来存储访问信息，contentRateLimit:10m 表示一个大小为10m,名字为contentRateLimit的内存区域。1M能存储16000 IP地址访问信息，10M可以存储16万IP地址访问
+- **rate**: 用于设置最大访问速率,rate=10r/s 表示每秒最多处理10请求。nginx实际上以毫秒为颗粒度来跟踪请求信息。因此10r/s实际上是限制每100毫秒处理一个请求。这意味着自上一个请求处理完，若后续100毫秒内又有请求到达，将拒接该请求。我们这里设置为2，方便测试。
+
+**测试**
+
+访问http://192.168.10.132/read_content?id=1，连续刷新就会报错
+
+![image-20201224091808770](C:\Users\Administrator.USER-20190627HM\AppData\Roaming\Typora\typora-user-images\image-20201224091808770.png)
+
+**配置2**
+
+上面例子限制2r/s，如果有时正常流量突然增大，超过的请求将被拒接，无法处理突发流量，可以结合**burst**参数使用来解决该问题
+
+```nginx
+server {
+    listen       80;
+    server_name  localhost;
+    location /update_content {
+        content_by_lua_file /root/lua/update_content.lua;
+    }
+    location /read_content {
+        limit_req zone=contentRateLimit burst=4;
+        content_by_lua_file /root/lua/read_content.lua;
+    }
+}
+```
+
+burst译为突发、爆发，表示在超过设定的处理速率后能额外处理的请求，当rate=10r/s时，将1s拆分10份，既每100ms可以处理1个请求。此处burst=4,若同时有4个请求达到,nginx会处理第一个请求。剩余3个请求将放入队列，然后每隔100ms从队列中获取一个请求进行处理。若请求大于4，将拒接处理多余的请求，直接返回503.
+
+不过，单独使用 burst 参数并不实用。假设 burst=50 ，rate依然为10r/s，排队中的50个请求虽然每100ms会处理一个，但第50个请求却需要等待 50 * 100ms即 5s，这么长的处理时间自然难以接受。
+
+因此，burst往往结合**nodelay** 一起使用
+
+```nginx
+limit_req zone=contentRateLimit burst=4 nodelay;
+```
+
+平均每秒允许不超过2个请求，突发不超过4个请求，并且处理突发4个请求的时候，没有延迟，等到完成之后，按照正常的速率处理。
+
+##  控制并发连接数
+
+**配置限制固定连接数**
+
+ngx_http_limit_conn_module  提供了限制连接数的能力。主要是利用limit_conn_zone和limit_conn两个指令。
+
+```nginx
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #cache
+    lua_shared_dict dis_cache 128m;
+
+    #限流设置
+    limit_req_zone $binary_remote_addr zone=contentRateLimit:10m rate=2r/s;
+
+    #根据IP地址来限制，存储内存大小10M
+    limit_conn_zone $binary_remote_addr zone=addr:1m;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    server {
+        listen       80;
+        server_name  localhost;
+        #所有以brand开始的请求，访问本地changgou-service-goods微服务
+        location /brand {
+            limit_conn addr 2;
+            proxy_pass http://192.168.211.1:18081;
+        }
+
+        location /update_content {
+            content_by_lua_file /root/lua/update_content.lua;
+        }
+
+        location /read_content {
+            limit_req zone=contentRateLimit burst=4 nodelay;
+            content_by_lua_file /root/lua/read_content.lua;
+        }
+    }
+}
+```
+
+> limit_conn_zone $binary_remote_addr zone=addr:10m;  表示限制根据用户的IP地址来显示，设置存储地址为的内存大小10M
+>
+> limit_conn addr 2;   表示 同一个地址只允许连接2次。
+
+**限制每个客户端IP与服务器的连接数，同时限制与虚拟服务器的连接总数**
+
+```nginx
+limit_conn_zone $binary_remote_addr zone=perip:10m;
+limit_conn_zone $server_name zone=perserver:10m; 
+server {  
+    listen       80;
+    server_name  localhost;
+    charset utf-8;
+    location / {
+        limit_conn perip 10;#单个客户端ip与服务器的连接数．
+        limit_conn perserver 100; ＃限制与服务器的总连接数
+        root   html;
+        index  index.html index.htm;
+    }
+}
+```
+
+
+
+
+
 #  Keepalived高可用
 
 ![image-20201202152503644](https://jameslin23.gitee.io/2020/12/01/ngnix//image-20201202152503644.png)

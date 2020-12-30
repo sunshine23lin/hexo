@@ -217,9 +217,203 @@
         
           <section id="main" style="float:none;">
   
+    <article id="post-docker基础篇" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/22/docker基础篇/">docker基础篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/12/22/docker基础篇/" class="article-date">
+	  <time datetime="2020-12-22T01:13:29.000Z" itemprop="datePublished">2020-12-22</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/docker/">docker</a>
+
+      
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          Docker简介什么是Docker？Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。
+为什么用Docker?作为一种新兴的虚拟化方法，Docker跟传统的虚拟化方式相比具有众多的优势。
+
+更高效的利用系统资源
+由于容器不需要进行硬件虚拟以及运行完整操作系统等额外开销，Docker 对系统资源的利用率更高。无论是应用执行...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/22/docker基础篇/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-tcp可靠机制" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/16/tcp可靠机制/">tcp可靠机制</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/12/16/tcp可靠机制/" class="article-date">
+	  <time datetime="2020-12-16T01:56:00.000Z" itemprop="datePublished">2020-12-16</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/计算机网络/">计算机网络</a>
+
+      
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          前言为了实现可靠性传输，需要考虑很多事情，例如数据的破坏、丢包、重复以及分片顺序混乱等问题。如不能解决这些问题，也就无从谈起可靠传输。
+那么，TCP 是通过序列号、确认应答、重发控制、连接管理以及窗口控制等机制实现可靠性传输的
+今天，将重点介绍 TCP 的重传机制、滑动窗口、流量控制、拥塞控制。
+
+##  重传机制超时重传指在设置时间内未收到对方ACK确认应答报文，就会重发数据。
+如果超时重发的数据，再次超时的时候，又需要重传时候，TCP的策略是超时间隔加倍。
+每当遇到一次超时重传的时候，...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/16/tcp可靠机制/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
+    <article id="post-http核心技术" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/15/http核心技术/">http核心技术</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/12/15/http核心技术/" class="article-date">
+	  <time datetime="2020-12-15T02:03:03.000Z" itemprop="datePublished">2020-12-15</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/计算机网络/">计算机网络</a>
+
+      
+      
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p class="article-excerpt-content">
+          前言
+HTTP 基本概念
+Get 与 Post
+HTTP 特性
+HTTP 与 HTTPS
+HTTP/1.1、HTTP/2、HTTP/3 演练
+
+
+HTTP基本概念初入认识http是超文本传输协议，是在一个计算机世界里专门在两点之间传输文字、图片、音频、视频等超文本数据的约定和规范。
+状态码
+常见字段
+Host
+客户端发送请求时，用来指定服务器的域名
+
+
+Content-Length 
+服务器在返回数据时，会有 Content-Length 字段，表明本次回应的数据长度。
+
+如上面则是告诉浏...
+        </p>
+        <p class="article-more-link">
+          <a href="/2020/12/15/http核心技术/#more">阅读全文</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+
+  
     <article id="post-TCP-IP" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="article-inner">
     
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2020/12/14/TCP-IP/">TCP-IP</a>
+    </h1>
+  
+
+      </header>
     
     <div class="article-meta">
       
@@ -612,180 +806,6 @@ key的最大失效时间是30天
         </p>
         <p class="article-more-link">
           <a href="/2020/12/09/Memcache/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-redis面试专题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2020/12/09/redis面试专题/">redis面试专题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2020/12/09/redis面试专题/" class="article-date">
-	  <time datetime="2020-12-09T00:55:02.000Z" itemprop="datePublished">2020-12-09</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Nosql/">Nosql</a>
-
-      
-      
-
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          一、redis用了哪些数据结构？适用哪些场景二、redis是单线程，为什么不使用多线程？三、redis持久化机制？四、redis哨兵模式如何实现故障转移？五、穿透，击穿，雪崩如何解决六、谈一谈redis分布式锁?七、你了解最经典的KV、DB读写模式么？八、为什么是删除缓存，而不是更新缓存？九、Redis 和 Memcached 有啥区别，为啥选择用Redis作为你们的缓存中间件？十、假如Redis里面有1亿个key，其中有10w个key是以某个固定的已知的前缀开头的，如何将它们全部找出来？...
-        </p>
-        <p class="article-more-link">
-          <a href="/2020/12/09/redis面试专题/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-redis分布式锁" class="article article-type-post" itemscope itemprop="blogPost">
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2020/12/07/redis分布式锁/">redis分布式锁</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2020/12/07/redis分布式锁/" class="article-date">
-	  <time datetime="2020-12-07T12:01:38.000Z" itemprop="datePublished">2020-12-07</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Nosql/">Nosql</a>
-
-      
-      
-
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          分布式锁什么是分布式锁?分布式锁就是控制分布式系统或不同系统之间共同访问共享资源的一种锁实现,如果不同的系统或同一个系统的不同主机之间共享了某个资源时，往往需要互斥来防止彼此干扰来保证一致性。
-分布式锁需要具备哪些条件
-互斥性:在任意一个时刻,只有一个客户端持有锁
-无死锁:即便持有锁的客户端崩溃或者其他意外事件,锁仍然可以被获取。
-容错:只要大部分redis节点都活着,客户端就可以获取锁和释放锁
-
-分布式锁实现有哪些？
-数据库
-Memcached（add命令）
-Redis（setnx命令）...
-        </p>
-        <p class="article-more-link">
-          <a href="/2020/12/07/redis分布式锁/#more">阅读全文</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-
-  
-    <article id="post-redis缓存故障" class="article article-type-post" itemscope itemprop="blogPost">
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2020/12/07/redis缓存故障/">redis缓存故障</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2020/12/07/redis缓存故障/" class="article-date">
-	  <time datetime="2020-12-07T06:25:23.000Z" itemprop="datePublished">2020-12-07</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/Nosql/">Nosql</a>
-
-      
-      
-
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p class="article-excerpt-content">
-          缓存穿透缓存穿透的概念,用户想查询一个数据，发现Redis没有，也就是缓存没有命中，于是向持久层数据库查询。发现也没有，于是本次查询失败。当用户很多时候，缓存都没有命中，于是都去请求了持久层数据库。这个给持久层数据库造成很多的压力。
-
- 解决方法:
-1、缓存空对象
-当存储层不命中时,即使返回空对象也将其缓存起来,设置一个过期时间，之后再访问这个数据将会从缓存中获取，保护了后端数据源
-
-但是这种方法会存在两个问题：
-
-1、缓存区可能存在大量空值的键
-2、可能会存在缓存层和存储层会有一段时间空...
-        </p>
-        <p class="article-more-link">
-          <a href="/2020/12/07/redis缓存故障/#more">阅读全文</a>
         </p>
       
     </div>

@@ -1,4 +1,5 @@
 ---
+
 title: 零散java知识补漏
 date: 2020-11-28 14:45:45
 categories: java基础
@@ -221,3 +222,56 @@ Exception: 程序可以处理的异常,捕获后可以处理
 > 返回对象的哈希代码值（就是散列码），用来支持哈希表，例如：HashMap
 >
 > 实现了hashCode一定要实现equals，因为底层HashMap就是通过这2个方法判断重复对象的
+
+###  String、StringBuffer、StingBuilder的区别
+
+- 可变性
+
+  String类使用final关键字修饰字符数组来保存字符串,所以String对象是不可变的。
+
+  StringBuilder与StringBuffer都继承AbstractStringBuilder,在类中没有使用final关键字修饰，所以这两种对象都是可变的
+
+  ```Java
+  abstract class AbstractStringBuilder implements Appendable, CharSequence {
+      char[] value;
+      int count;
+      AbstractStringBuilder() {
+      }
+      AbstractStringBuilder(int capacity) {
+          value = new char[capacity];
+      }
+  ```
+
+- 安全性
+
+  String是不可变的，所以是线程安全的
+
+  StringBuffer使用synchironized修饰，线程安全的
+
+  StringBuilder线程不安全的。
+
+- 性能
+
+  StringBuffer源码
+
+  ```java
+    @Override
+      public synchronized String toString() {
+          if (toStringCache == null) {
+              toStringCache = Arrays.copyOfRange(value, 0, count);
+          }
+          return new String(toStringCache, true);
+      }
+  ```
+
+​       StringBuilder源码
+
+       ```java
+ @Override
+    public String toString() {
+        // Create a copy, don't share the array
+        return new String(value, 0, count);
+    }
+       ```
+
+ StringBuffer的缓存有数据时，就直接在缓存区，而StringBuiler每次都是直接copy，这样StringBuffer相对StingBuiler做了一个性能上的优化，所以只有当数量足够大，StringBuffer的缓存区填补不了加锁的影响的性能时，StringBuiler才能性能上展示出它的优势。
